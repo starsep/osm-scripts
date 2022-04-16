@@ -1,3 +1,6 @@
 .ipynb_checkpoints
 paczkomaty.geojson
 paczkomaty.xlsx
+__pycache__
+cache
+*.ipynb

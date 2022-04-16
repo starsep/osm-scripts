@@ -15,17 +15,16 @@ def downloadDisusedRoutes():
     return overpassResult.relations
 
 
-disusedRoutes = downloadDisusedRoutes()
-
-
 def disusedRouteType(route):
     return route.tags["disused:route"]
 
 
-for vehicle, routes in groupby(
-    sorted(disusedRoutes, key=disusedRouteType), key=disusedRouteType
-):
-    print()
-    print(vehicle)
-    for route in sorted(list(routes), key=lambda route: route.tags["name"]):
-        print(route.tags["name"], f"https://osm.org/relation/{route.id}")
+if __name__ == "__main__":
+    disusedRoutes = downloadDisusedRoutes()
+    for vehicle, routes in groupby(
+        sorted(disusedRoutes, key=disusedRouteType), key=disusedRouteType
+    ):
+        print()
+        print(vehicle)
+        for route in sorted(list(routes), key=lambda route: route.tags["name"]):
+            print(route.tags["name"], f"https://osm.org/relation/{route.id}")

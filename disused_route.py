@@ -4,7 +4,7 @@ import overpy
 
 
 def downloadDisusedRoutes():
-    query = f"""
+    query = """
         area["name"="Warszawa"]["admin_level"=6];
         (
             relation["disused:route"]["name"](area);

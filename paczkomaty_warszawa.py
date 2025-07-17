@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run python
 import geojson
 from geojson import FeatureCollection, Feature, Point
 import requests

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env -S uv run python
 import argparse
 import asyncio
 from dataclasses import dataclass
